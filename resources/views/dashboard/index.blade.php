@@ -13,7 +13,7 @@
                 <div class="card bg-secondary text-white mb-4">
                     <div class="card-body">المستخدمين</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="nav-link small text-white" href="{{ route('dashboard.projects.index') }}">
+                        <a class="nav-link small text-white" href="{{ route('dashboard.users.index') }}">
                             اجمالي عدد المستخدمين: {{ \App\Models\User::count() }}
                         </a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -35,7 +35,7 @@
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">المهارات</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="nav-link small text-white" href="{{ route('dashboard.projects.index') }}">
+                        <a class="nav-link small text-white" href="{{ route('dashboard.tools.index') }}">
                             اجمالي عدد المهارات: {{ \App\Models\Tool::count() }}
                         </a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -46,7 +46,7 @@
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body">الرسائل</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="nav-link small text-white" href="{{ route('dashboard.projects.index') }}">
+                        <a class="nav-link small text-white" href="{{ route('dashboard.contacts.index') }}">
                             اجمالي عدد الرسائل: {{ \App\Models\Contact::count() }}
                         </a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>

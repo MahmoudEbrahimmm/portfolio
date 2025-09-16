@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>@yield('title', 'Dashboard')</title>
     <!-- Favicon  -->
-    <link rel="icon" href="{{ asset('front/images/favicon.png') }}">
+    <link rel="icon" href="{{ asset('front/images/صورتي خلفيه بيضه.jpg') }}">
 
     {{-- CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />

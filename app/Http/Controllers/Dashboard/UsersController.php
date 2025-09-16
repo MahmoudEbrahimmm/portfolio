@@ -45,9 +45,9 @@ class UsersController extends Controller
         User::create([
             'name'     => $request->name,
             'email'    => $request->email,
-            'phone'    => $request->phone,
-            'national' => $request->national,
-            'address'  => $request->address,
+            'user' => $request->phone ?? null,
+            'national' => $request->national ?? null,
+            'address'  => $request->address ?? null,
             'role'     => $request->role,
             'password' => Hash::make($request->password),
         ]);
@@ -122,6 +122,6 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         return redirect()->route('dashboard.users.index')
-        ->with('success','تم حدذ المستخدم بنجاح');
+            ->with('success', 'تم حدذ المستخدم بنجاح');
     }
 }

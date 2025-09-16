@@ -19,6 +19,11 @@
                         <a class="btn-outline-lg page-scroll" href="#contact">
                             <i class="fas fa-user"></i> تواصل معي
                         </a>
+                        <a class="btn-outline-lg page-scroll" href="{{ asset('cv/Mohamoud Ebrahim Backend.pdf') }}" download>
+                            <i class="fas fa-file-download"></i> تحميل السيرة الذاتية
+                        </a>
+
+
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -127,11 +132,11 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
-            <div class="row g-3"> 
+            <div class="row g-3">
                 @foreach ($tools as $tool)
                     <x-tools :tool="$tool" />
                 @endforeach
-            
+
             </div><!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-2 -->
@@ -164,64 +169,8 @@
                 @foreach ($projects as $project)
                     <x-projects :project="$project" />
                 @endforeach
-                
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/work-2.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Visodream, <strong>Project:</strong> developed a new forum for the
-                            Visodream community <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/work-3.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Primoday, <strong>Project:</strong> complete redesign of their corporate
-                            website and platform <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/work-4.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Nextlite, <strong>Project:</strong> created a custom video editing and
-                            upload web app <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/work-5.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Syncnow, <strong>Project:</strong> web design for their corporate websites
-                            and landing pages <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/work-6.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-                        <p><strong>For:</strong> Shifter, <strong>Project:</strong> started a new website from ground up for
-                            a new product <a class="blue" href="project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
+
+            
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-4 -->
@@ -276,15 +225,15 @@
                         @csrf
                         <div class="form-group">
                             <input type="text" class="form-control-input" name="name" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
+                            <label class="label-control" for="cname">الاسم</label>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control-input" name="email" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
+                            <label class="label-control" for="cemail">البريد</label>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control-textarea" name="description" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Project details</label>
+                            <label class="label-control" for="cmessage">الرسالة</label>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">ارسال</button>

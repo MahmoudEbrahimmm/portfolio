@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\User;
+use App\Notifications\NewContactNotification;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -28,22 +30,28 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name'        => 'required|string|max:255',
-            'email'       => 'required|email|max:255',
-            'description' => 'required|string',
-        ]);
+public function store(Request $request)
+{
+    $request->validate([
+        'name'        => 'required|string|max:255',
+        'email'       => 'required|email|max:255',
+        'description' => 'required|string',
+    ]);
 
-        Contact::create([
-            'name'        => $request->name,
-            'email'       => $request->email,
-            'description' => $request->description,
-        ]);
+    $contact = Contact::create([
+        'name'        => $request->name,
+        'email'       => $request->email,
+        'description' => $request->description,
+    ]);
 
-        return back()->with('success', 'تم إرسال رسالتك بنجاح ✅');
+    $admins = User::where('role', 'admin')->get();
+    foreach ($admins as $admin) {
+        $admin->notify(new NewContactNotification($contact));
     }
+
+    return back()->with('success', 'تم إرسال رسالتك بنجاح');
+}
+
 
     /**
      * Display the specified resource.

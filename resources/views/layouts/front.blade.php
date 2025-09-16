@@ -23,13 +23,15 @@
 
     <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
     <link href="{{ asset('front/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('front/css/fontawesome-all.css') }}" rel="stylesheet">
     <link href="{{ asset('front/css/styles.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('front/images/favicon.png') }}">
+    <link rel="icon" href="{{ asset('front/images/صورتي خلفيه بيضه.jpg') }}">
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -52,7 +54,7 @@
                     <!-- Admin Dashboard Link -->
                     @if (Auth::check() && Auth::user()->role == 'admin')
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="{{ route('dashboard') }}">
+                            <a class="nav-link page-scroll" href="{{ route('dashboard.index') }}">
                                 لوحة التحكم <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -60,7 +62,11 @@
 
                     <!-- Main Navigation Links -->
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">الرئيسية <span class="sr-only">(current)</span></a>
+                        <a class="nav-link">{{ Auth::user()->name ?? '' }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#header">الرئيسية <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">نبذة عني</a>
@@ -76,7 +82,7 @@
                     </li>
 
                     <!-- Authentication Dropdown -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown mx-2">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">التسجيل</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -92,33 +98,29 @@
                             </form>
                         </div>
                     </li>
-
                 </ul>
 
-                <!-- Social Icons -->
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
+                <span class="fa-stack">
+                    <a href="https://www.linkedin.com/in/mahmoud-ebrahim-347057277" target="_blank">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                    </a>
                 </span>
-            </div> <!-- end of navbar-collapse -->
 
-            <!-- Flash Messages -->
-            @if (session('success'))
-                <div class="alert alert-success mt-3">
-                    {{ session('success') }}
-                </div>
-            @endif
-        </div> <!-- end of container -->
+                <span class="fa-stack">
+                    <a href="https://github.com/MahmoudEbrahimmm" target="_blank">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x"></i>
+                    </a>
+                </span>
+
+                <!-- Flash Messages -->
+                @if (session('success'))
+                    <div class="alert alert-success mt-3">
+                        {{ session('success') }}
+                    </div>
+                @endif
+            </div> <!-- end of container -->
     </nav>
     <!-- end of navigation -->
 
@@ -131,36 +133,39 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="social-container">
+
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="https://www.facebook.com/mahmoud.ebrahim.563549" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
+
+
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="https://www.linkedin.com/in/mahmoud-ebrahim-347057277" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
                             </a>
                         </span>
+
+
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="https://wa.me/201004976135" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                                <i class="fab fa-whatsapp fa-stack-1x"></i>
                             </a>
                         </span>
+
+
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="https://github.com/MahmoudEbrahimmm" target="_blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
+                                <i class="fab fa-github fa-stack-1x"></i>
                             </a>
                         </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
+
+
                     </div> <!-- end of social-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -187,7 +192,6 @@
     <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('front/js/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('front/js/scripts.js') }}"></script>
-
 </body>
 
 </html>
