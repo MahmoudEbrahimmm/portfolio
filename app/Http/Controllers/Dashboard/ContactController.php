@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return view('dashboard.contacts.index',compact('contacts'));
+        return view('dashboard.contacts.index', compact('contacts'));
     }
 
     /**
@@ -30,7 +30,19 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'        => 'required|string|max:255',
+            'email'       => 'required|email|max:255',
+            'description' => 'required|string',
+        ]);
+
+        Contact::create([
+            'name'        => $request->name,
+            'email'       => $request->email,
+            'description' => $request->description,
+        ]);
+
+        return back()->with('success', 'تم إرسال رسالتك بنجاح ✅');
     }
 
     /**
@@ -64,6 +76,6 @@ class ContactController extends Controller
     {
         $contacts = Contact::findOrFail($id);
         $contacts->delete();
-        return redirect()->route('dashboard.contacts.index')->with('success','تم حذف الرسالة لنجاح');
+        return redirect()->route('dashboard.contacts.index')->with('success', 'تم حذف الرسالة لنجاح');
     }
 }
