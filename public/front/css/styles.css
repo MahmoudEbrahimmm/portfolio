@@ -52,7 +52,7 @@ h1 {
 	font-weight: 700;
 	font-size: 2.5rem;
 	line-height: 3.25rem;
-	font-family: "Poppins"
+	font-family: "Poppins";
 }
 
 h2 {
@@ -60,7 +60,7 @@ h2 {
 	font-weight: 700;
 	font-size: 2rem;
 	line-height: 2.5rem;
-	font-family: "Poppins"
+	font-family: "Poppins";
 }
 
 h3 {
@@ -168,7 +168,7 @@ a:hover {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #0b36a8; /* needs to stay here because of the color property of a tag */
+	color: #0b36a8;
 	text-decoration: none;
 }
 
@@ -445,6 +445,17 @@ input[type='checkbox'] {
 .navbar .dropdown .dropdown-menu {
 	animation: fadeDropdown 0.2s; /* required for the fade animation */
 }
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #24262a;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 @keyframes fadeDropdown {
     0% {

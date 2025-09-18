@@ -117,7 +117,7 @@
 
 
     <!-- Services -->
-    <div id="services" class="basic-2">
+    <div id="tools" class="basic-2">
         <div class="container">
 
             <div class="row">

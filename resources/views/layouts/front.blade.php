@@ -5,23 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
 
-    <!-- OG Meta Tags (Facebook, Twitter, LinkedIn) -->
-    <meta property="og:site_name" content="" />
-    <meta property="og:site" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description"
+        content="بورتفوليو محمود إبراهيم - مطور باك إند PHP & Laravel. استعرض مشاريعي ومهاراتي وخبراتي العملية.">
+    <meta name="author" content="Mahmoud Ebrahim">
 
-    <!-- Webpage Title -->
+
+    <meta property="og:site_name" content="Mahmoud Ebrahim Portfolio" />
+    <meta property="og:site" content="https://mahmoudebrahim.dev" />
+    <meta property="og:title" content="بورتفوليو محمود إبراهيم | Backend Developer" />
+    <meta property="og:description"
+        content="أنا محمود إبراهيم، مطور باك إند متخصص في PHP & Laravel. عندي خبرة عملية من مشاريع فعلية، وده موقعي الشخصي لاستعراض أعمالي." />
+    <meta property="og:image" content="https://mahmoudebrahim.dev/images/preview.png" />
+    <meta property="og:url" content="https://mahmoudebrahim.dev" />
+
+    <meta name="twitter:title" content="بورتفوليو محمود إبراهيم | Backend Developer">
+    <meta name="twitter:description" content="محمود إبراهيم - مطور باك إند PHP & Laravel. تصفح مشاريعي ومهاراتي هنا.">
+    <meta name="twitter:image" content="https://mahmoudebrahim.dev/images/preview.png">
+
+
     <title>Mahmoud-Ebrahim</title>
 
-    <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap"
@@ -30,7 +34,6 @@
     <link href="{{ asset('front/css/fontawesome-all.css') }}" rel="stylesheet">
     <link href="{{ asset('front/css/styles.css') }}" rel="stylesheet">
 
-    <!-- Favicon -->
     <link rel="icon" href="{{ asset('front/images/صورتي خلفيه بيضه.jpg') }}">
 </head>
 
@@ -64,15 +67,15 @@
                     <li class="nav-item">
                         <a class="nav-link">{{ Auth::user()->name ?? '' }}</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">الرئيسية <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="#header">الرئيسية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">نبذة عني</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">المهارات</a>
+                        <a class="nav-link page-scroll" href="#tools">المهارات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#projects">المشاريع</a>
@@ -192,6 +195,8 @@
     <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('front/js/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('front/js/scripts.js') }}"></script>
+
+
 </body>
 
 </html>
