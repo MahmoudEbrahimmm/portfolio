@@ -19,7 +19,7 @@
                         <a class="btn-outline-lg page-scroll" href="#contact">
                             <i class="fas fa-user"></i> تواصل معي
                         </a>
-                        <a class="btn-outline-lg page-scroll" href="{{ asset('cv/Mohamoud Ebrahim Backend.pdf') }}" download>
+                        <a class="btn-outline-lg page-scroll" href="{{ asset('cv/Mahmoud_Ebrahim_Backend_Laravel.pdf') }}" download>
                             <i class="fas fa-file-download"></i> تحميل السيرة الذاتية
                         </a>
 
@@ -247,3 +247,6 @@
     </div> <!-- end of form-1 -->
     <!-- end of contact -->
 @endsection
+
+
+
