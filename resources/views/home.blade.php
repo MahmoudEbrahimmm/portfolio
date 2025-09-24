@@ -6,6 +6,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
+                        @if (session('success'))
+                            <div class="alert alert-success mt-3">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <h2 class="text-white">
                             أهلاً بك <br>
                             أنا <span class="fw-bold">محمود إبراهيم</span><br>
@@ -19,7 +24,8 @@
                         <a class="btn-outline-lg page-scroll" href="#contact">
                             <i class="fas fa-user"></i> تواصل معي
                         </a>
-                        <a class="btn-outline-lg page-scroll" href="{{ asset('cv/Mahmoud_Ebrahim_Backend_Laravel.pdf') }}" download>
+                        <a class="btn-outline-lg page-scroll" href="{{ asset('cv/Mahmoud_Ebrahim_Backend_Laravel.pdf') }}"
+                            download>
                             <i class="fas fa-file-download"></i> تحميل السيرة الذاتية
                         </a>
 
@@ -170,7 +176,7 @@
                     <x-projects :project="$project" />
                 @endforeach
 
-            
+
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-4 -->
@@ -247,6 +253,3 @@
     </div> <!-- end of form-1 -->
     <!-- end of contact -->
 @endsection
-
-
-

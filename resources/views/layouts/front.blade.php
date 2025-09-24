@@ -40,7 +40,7 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
             <!-- Brand -->
             <h6 class="nav-link text-white">Mahmoud-Ebrahim</h6>
@@ -118,11 +118,7 @@
                 </span>
 
                 <!-- Flash Messages -->
-                @if (session('success'))
-                    <div class="alert alert-success mt-3">
-                        {{ session('success') }}
-                    </div>
-                @endif
+                
             </div> <!-- end of container -->
     </nav>
     <!-- end of navigation -->
